@@ -903,7 +903,7 @@ export default function Home() {
             alt="Luxury Spa Environment"
             className="hero-bg"
             id="hero-bg-img"
-            style={{ transform: `scale(1.1) translateX(4%) translateY(${heroParallaxY}px)` }}
+            style={{ transform: `scale(1.08) translateY(${heroParallaxY}px)` }}
           />
           
         </div>
