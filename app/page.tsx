@@ -214,6 +214,15 @@ const WHATSAPP_NUMBER = "918153001114";
 const WHATSAPP_MESSAGE = encodeURIComponent("Hi, I would like to book an appointment.");
 const WHATSAPP_LINK = `https://wa.me/${WHATSAPP_NUMBER}?text=${WHATSAPP_MESSAGE}`;
 
+const BASE_PATH = process.env.NEXT_PUBLIC_BASE_PATH || "";
+
+const getAssetPath = (path: string) => {
+  if (!path) return path;
+  if (path.startsWith("http://") || path.startsWith("https://")) return path;
+  const cleanPath = path.startsWith("/") ? path : `/${path}`;
+  return `${BASE_PATH}${cleanPath}`;
+};
+
 const TIMELINE_STEPS = [
   {
     number: "1",
@@ -837,7 +846,7 @@ export default function Home() {
       {preloaderVisible && (
         <div className="preloader" id="preloader" style={{ opacity: preloaderOpacity }}>
           <div className="preloader-content" style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
-            <img src="/logo.png" alt="G3 Luxury Logo" style={{ height: "90px", width: "auto", marginBottom: "15px", objectFit: "contain" }} />
+            <img src={getAssetPath("/logo.png")} alt="G3 Luxury Logo" style={{ height: "90px", width: "auto", marginBottom: "15px", objectFit: "contain" }} />
             <div className="preloader-logo">G3 Luxury</div>
             <div className="preloader-spinner"></div>
           </div>
@@ -853,7 +862,7 @@ export default function Home() {
       <nav id="main-nav" className={isNavScrolled ? "scrolled" : ""}>
         <div className="nav-container">
           <a href="#hero" className="nav-logo" onClick={handleRipple}>
-            <img src="/logo.png" alt="G3 Luxury Logo" style={{ height: "35px", width: "auto", marginRight: "10px", objectFit: "contain" }} />
+            <img src={getAssetPath("/logo.png")} alt="G3 Luxury Logo" style={{ height: "35px", width: "auto", marginRight: "10px", objectFit: "contain" }} />
             <span>G3 Luxury</span>
           </a>
 
@@ -890,7 +899,7 @@ export default function Home() {
       <header id="hero" className="hero-section">
         <div className="hero-bg-wrapper">
           <img
-            src="/hero-bg.png"
+            src={getAssetPath("/hero-bg.png")}
             alt="Luxury Spa Environment"
             className="hero-bg"
             id="hero-bg-img"
@@ -1091,7 +1100,7 @@ export default function Home() {
                   }}
                 >
                   <div className="service-img-wrapper">
-                    <img src={srv.image} alt={srv.title} className="service-img" loading="lazy" />
+                    <img src={getAssetPath(srv.image)} alt={srv.title} className="service-img" loading="lazy" />
                     {srv.price && <span className="service-price">{srv.price}</span>}
                   </div>
                   <div className="service-content">
@@ -1184,7 +1193,7 @@ export default function Home() {
               </button>
               <div className="service-modal-grid">
                 <div className="service-modal-img-wrapper">
-                  <img src={activeServiceDetails.image} alt={activeServiceDetails.title} className="service-modal-img" />
+                  <img src={getAssetPath(activeServiceDetails.image)} alt={activeServiceDetails.title} className="service-modal-img" />
                 </div>
                 <div className="service-modal-info">
                   <h3 className="service-modal-title">{activeServiceDetails.title}</h3>
@@ -1293,13 +1302,13 @@ export default function Home() {
       {/* 19. Footer Section */}
       <footer id="footer" className="footer text-muted-light">
         {/* Luxury Hero Banner Section */}
-        <div className="footer-banner-wrapper">
+        <div className="footer-banner-wrapper" style={{ backgroundImage: `url(${getAssetPath("/head_massage.png")})` }}>
           <div className="footer-banner-overlay"></div>
           <div className="footer-banner-content">
             {/* Center Logo */}
             <div className="footer-brand-logo-wrap">
               <a href="#hero" onClick={handleRipple} aria-label="G3 Luxury Home">
-                <img src="/logo.png" alt="G3 Luxury Massage & Wellness Spa" className="footer-brand-logo-img" />
+                <img src={getAssetPath("/logo.png")} alt="G3 Luxury Massage & Wellness Spa" className="footer-brand-logo-img" />
               </a>
             </div>
 
