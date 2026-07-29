@@ -1,21 +1,41 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Cormorant_Garamond, Plus_Jakarta_Sans, Playfair_Display } from "next/font/google";
 import "./globals.css";
+import "./style.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const cormorant = Cormorant_Garamond({
   subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700"],
+  variable: "--font-serif",
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const plusJakarta = Plus_Jakarta_Sans({
   subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700"],
+  variable: "--font-sans",
+});
+
+const playfair = Playfair_Display({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-playfair",
 });
 
 export const metadata: Metadata = {
-  title: "Next.js SSG + Tailwind + Framer Motion Template",
+  title: "G3 Luxury | Massage & Wellness Spa",
   description:
-    "A production-ready boilerplate to generate SSG static sites with Next.js 16, Tailwind CSS v4, Framer Motion animations, and zero-config deployment to GitHub Pages using GitHub Actions.",
+    "Indulge in a premium, holistic wellness experience at G3 Luxury. Certified therapists, organic oils, and high-end sensory treatments designed for ultimate restoration.",
+  keywords: [
+    "luxury spa",
+    "wellness center",
+    "massage therapy",
+    "facial treatment",
+    "steam therapy",
+    "hot stone massage",
+    "couple spa",
+    "organic products",
+    "g3 luxury",
+  ],
 };
 
 export default function RootLayout({
@@ -26,7 +46,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      className={`${cormorant.variable} ${plusJakarta.variable} ${playfair.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">{children}</body>
     </html>
