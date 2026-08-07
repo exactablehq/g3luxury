@@ -1,7 +1,10 @@
 import type { Metadata } from "next";
 import { Cormorant_Garamond, Plus_Jakarta_Sans, Playfair_Display } from "next/font/google";
+import JsonLd from "@/components/ui/JsonLd";
+import CookieConsentBanner from "@/components/ui/CookieConsentBanner";
+import AnalyticsScripts from "@/components/ui/AnalyticsScripts";
+import { SITE_URL } from "@/lib/site";
 import "./globals.css";
-import "./style.css";
 
 const cormorant = Cormorant_Garamond({
   subsets: ["latin"],
@@ -22,9 +25,13 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: "G3 Luxury | Massage & Wellness Spa",
+  metadataBase: new URL(SITE_URL),
+  title: {
+    default: "G3 Luxury | Massage & Wellness Spa in Nani Daman",
+    template: "%s | G3 Luxury",
+  },
   description:
-    "Indulge in a premium, holistic wellness experience at G3 Luxury. Certified therapists, organic oils, and high-end sensory treatments designed for ultimate restoration.",
+    "Indulge in a premium, holistic wellness experience at G3 Luxury in Nani Daman. Certified therapists, organic oils, and high-end sensory treatments designed for ultimate restoration.",
   keywords: [
     "luxury spa",
     "wellness center",
@@ -35,7 +42,32 @@ export const metadata: Metadata = {
     "couple spa",
     "organic products",
     "g3 luxury",
+    "spa in daman",
   ],
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    title: "G3 Luxury | Massage & Wellness Spa",
+    description:
+      "Premium, holistic wellness experiences in Nani Daman — certified therapists, organic oils, and high-end sensory treatments.",
+    url: SITE_URL,
+    siteName: "G3 Luxury",
+    images: [{ url: "/opengraph-image.png", width: 1200, height: 630 }],
+    locale: "en_IN",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "G3 Luxury | Massage & Wellness Spa",
+    description:
+      "Premium, holistic wellness experiences in Nani Daman — certified therapists, organic oils, and high-end sensory treatments.",
+    images: ["/opengraph-image.png"],
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function RootLayout({
@@ -47,8 +79,14 @@ export default function RootLayout({
     <html
       lang="en"
       className={`${cormorant.variable} ${plusJakarta.variable} ${playfair.variable} h-full antialiased`}
+      suppressHydrationWarning
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="flex min-h-full flex-col" suppressHydrationWarning>
+        <JsonLd />
+        {children}
+        <CookieConsentBanner />
+        <AnalyticsScripts />
+      </body>
     </html>
   );
 }
