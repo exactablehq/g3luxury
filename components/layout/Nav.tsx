@@ -61,10 +61,10 @@ export default function Nav() {
   return (
     <header className="fixed inset-x-0 top-5 z-50 flex justify-center px-4 sm:px-6">
       <nav
-        className={`relative flex w-full max-w-5xl items-center justify-between rounded-full border transition-all duration-500 px-6 py-4 sm:px-8 sm:py-4.5 ${
+        className={`relative flex w-full max-w-5xl items-center justify-between rounded-full transition-all duration-500 px-6 py-4 sm:px-8 sm:py-4.5 transform-gpu ${
           scrolled
-            ? "border-(--color-gold)/35 bg-black/75 shadow-[0_16px_40px_rgba(0,0,0,0.85),0_0_24px_rgba(229,169,59,0.18)] backdrop-blur-xl"
-            : "border-transparent bg-transparent shadow-none backdrop-blur-none"
+            ? "bg-black/50 shadow-[0_20px_50px_rgba(0,0,0,0.6)] backdrop-blur-xl"
+            : "bg-transparent shadow-none backdrop-blur-none"
         }`}
       >
         {/* Left: Brand Logo Container */}
@@ -115,7 +115,7 @@ export default function Nav() {
                   {isActive && (
                     <motion.span
                       layoutId="activePillDot"
-                      className="absolute -bottom-1.5 left-1/2 h-1 w-1 -translate-x-1/2 rounded-full bg-(--color-gold)"
+                      className="absolute -bottom-1.5 left-1/2 h-1 w-1 -translate-x-1/2 rounded-full bg-(--color-gold) shadow-[0_0_8px_rgba(229,169,59,0.8)]"
                       transition={{
                         type: "spring",
                         stiffness: 380,
@@ -152,7 +152,7 @@ export default function Nav() {
           <button
             aria-label="Toggle navigation"
             onClick={() => setMenuOpen((v) => !v)}
-            className="flex h-9 w-9 items-center justify-center rounded-full border border-white/15 bg-white/5 text-white transition-all duration-300 hover:bg-white/15 active:scale-95 lg:hidden"
+            className="flex h-9 w-9 items-center justify-center rounded-full bg-white/10 text-white backdrop-blur-md transition-all duration-300 hover:bg-white/20 active:scale-95 lg:hidden"
           >
             <svg
               viewBox="0 0 24 24"
@@ -180,7 +180,7 @@ export default function Nav() {
               animate={{ opacity: 1, y: 0, scale: 1 }}
               exit={{ opacity: 0, y: -12, scale: 0.96 }}
               transition={{ duration: 0.25, ease: [0.25, 1, 0.5, 1] }}
-              className="absolute top-full left-0 right-0 z-40 mt-3 overflow-hidden rounded-3xl border border-white/15 bg-black/85 p-6 shadow-2xl backdrop-blur-2xl lg:hidden"
+              className="absolute top-full left-0 right-0 z-40 mt-3 overflow-hidden rounded-3xl bg-black/80 p-6 shadow-[0_25px_60px_rgba(0,0,0,0.8)] backdrop-blur-3xl lg:hidden"
             >
               <ul className="flex flex-col gap-5">
                 {LINKS.map((link, idx) => (
