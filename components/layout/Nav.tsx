@@ -9,7 +9,7 @@ const LINKS = [
   { href: "about", label: "About Us" },
   // { href: "why-choose-us", label: "Why Choose Us" },
   { href: "services", label: "Services" },
-  { href: "faq", label: "FAQs" },
+  { href: "location", label: "Location" },
 ];
 
 export default function Nav() {
@@ -21,7 +21,7 @@ export default function Nav() {
     const handleScroll = () => {
       setScrolled(window.scrollY > 40);
 
-      const trackedIds = ["hero", "about", "why-choose-us", "services", "faq"];
+      const trackedIds = ["hero", "about", "why-choose-us", "services", "location"];
       const headerOffset = 160;
       let current = "hero";
       for (const id of trackedIds) {
