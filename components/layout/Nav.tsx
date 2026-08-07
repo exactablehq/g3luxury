@@ -89,6 +89,7 @@ export default function Nav() {
               priority
               unoptimized
               className="h-8 w-auto object-contain sm:h-10 md:h-11"
+              style={{ width: "auto" }}
             />
           </motion.a>
         </div>

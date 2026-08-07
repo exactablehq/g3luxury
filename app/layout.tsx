@@ -31,22 +31,26 @@ const playfair = Playfair_Display({
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: "G3 Luxury | Massage & Wellness Spa in Nani Daman",
+    default: "G3 Luxury | Best Spa in Daman, Vapi & Udvada", //"G3 Luxury | Massage & Wellness Spa in Nani Daman"
     template: "%s | G3 Luxury",
   },
   description:
-    "Indulge in a premium, holistic wellness experience at G3 Luxury in Nani Daman. Certified therapists, organic oils, and high-end sensory treatments designed for ultimate restoration.",
+    "Indulge in a premium, holistic wellness experience at G3 Luxury — the best spa in Daman, Vapi, Udvada, Valsad, and Silvassa. Experience elite therapies, custom steam baths, and organic oil massages.",
   keywords: [
-    "luxury spa",
-    "wellness center",
-    "massage therapy",
-    "facial treatment",
-    "steam therapy",
-    "hot stone massage",
-    "couple spa",
-    "organic products",
-    "g3 luxury",
-    "spa in daman",
+    "best spa in daman",
+    "best spa in vapi",
+    "best spa in udvada",
+    "luxury spa daman",
+    "spa near vapi",
+    "wellness spa daman",
+    "massage in daman",
+    "body massage vapi",
+    "couple spa daman",
+    "massage parlour in daman",
+    "spa silvassa",
+    "spa valsad",
+    "G3 Luxury Spa Daman",
+    "massage therapist daman",
   ],
   alternates: {
     canonical: "/",

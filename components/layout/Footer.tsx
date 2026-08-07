@@ -12,24 +12,25 @@ export default function Footer() {
       id="footer"
       className="relative border-t border-(--color-border) bg-(--color-bg-void)"
     >
-      <div className="container-page flex flex-col items-center gap-10 py-20 text-center">
+      <div className="container-page flex flex-col items-center gap-10 pt-20 pb-10 text-center">
         <Image
           src={getAssetPath("/logo.png")}
           alt="G3 Luxury Massage & Wellness Spa"
           width={180}
           height={64}
           className="h-16 w-auto object-contain"
+          style={{ width: "auto" }}
         />
 
         <div className="h-px w-24 bg-(--color-gold)" />
 
-        <div className="grid w-full max-w-3xl gap-10 text-left sm:grid-cols-2">
-          <div className="flex flex-col gap-3">
+        <div className="grid w-full max-w-3xl gap-10 text-center sm:text-left sm:grid-cols-2">
+          <div className="flex flex-col gap-4 items-start px-6 sm:px-0">
             <a
               href={WHATSAPP_LINK}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-3 font-sans text-sm text-(--color-text-muted) transition-colors hover:text-(--color-gold) selectable-contact"
+              className="flex items-center gap-3 justify-center sm:justify-start font-sans text-sm text-(--color-text-muted) transition-colors hover:text-(--color-gold) selectable-contact w-fit"
             >
               <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-(--color-border) text-(--color-gold)">
                 <svg
@@ -44,8 +45,8 @@ export default function Footer() {
               {ORG_PHONE_DISPLAY}
             </a>
 
-            <div className="flex gap-3">
-              <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-(--color-border) text-(--color-gold)">
+            <div className="flex gap-3 items-start justify-center sm:justify-start">
+              <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-(--color-border) text-(--color-gold) mt-0.5">
                 <svg
                   viewBox="0 0 24 24"
                   width="14"
@@ -59,7 +60,7 @@ export default function Footer() {
                 href="https://maps.google.com/?q=G3+Luxury+Massage+%26+Wellness+Spa,+Tin+Batti+Circle,+Nani+Daman"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="font-sans text-sm text-(--color-text-muted) selectable-contact hover:text-(--color-gold) transition-colors duration-300 block"
+                className="font-sans text-sm text-(--color-text-muted) selectable-contact hover:text-(--color-gold) transition-colors duration-300 block text-left"
               >
                 <p className="text-(--color-text-primary)">{ORG_LEGAL_NAME}</p>
                 {ORG_ADDRESS_LINES.map((line) => (
@@ -69,7 +70,7 @@ export default function Footer() {
             </div>
           </div>
 
-          <div className="flex flex-col items-start justify-end gap-3 sm:items-end">
+          <div className="flex flex-col items-center justify-end gap-3 sm:items-end">
             <a
               href="/terms"
               className="font-sans text-sm text-(--color-text-muted) transition-colors hover:text-(--color-gold)"
@@ -82,11 +83,37 @@ export default function Footer() {
             >
               Privacy Policy
             </a>
-            <p className="mt-4 font-sans text-xs text-(--color-text-faint)">
+            <p className="mt-4 font-sans text-xs text-(--color-text-faint) text-center sm:text-right">
               &copy; {new Date().getFullYear()} G3 Luxury Wellness. All Rights
               Reserved.
             </p>
           </div>
+        </div>
+
+        {/* Attribution Subfooter */}
+        <div className="mt-16 flex flex-col items-center justify-center gap-1.5 border-t border-white/5 pt-8">
+          <a
+            href="https://exactable.in"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group flex flex-col items-center gap-1.5 opacity-60 transition-opacity duration-300 hover:opacity-100"
+          >
+            <span className="font-sans text-[9px] font-bold tracking-[0.25em] text-zinc-500 uppercase">
+              Crafted By
+            </span>
+            <div className="flex items-center">
+              <Image
+                src={getAssetPath("/exactable.svg")}
+                alt="Exactable"
+                width={120}
+                height={22}
+                priority
+                unoptimized
+                className="h-5 w-auto object-contain sm:h-5 md:h-5"
+                style={{ width: "auto" }}
+              />
+            </div>
+          </a>
         </div>
       </div>
     </footer>
