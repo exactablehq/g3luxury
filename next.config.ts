@@ -6,7 +6,7 @@ const nextConfig: NextConfig = {
     minimumCacheTTL: 31536000, // 1 year cache TTL for optimized images
     formats: ["image/avif", "image/webp"],
   },
-  allowedDevOrigins: ["192.168.1.8"],
+  // allowedDevOrigins: ["192.168.1.8"],
   output: "export",
 };
 
