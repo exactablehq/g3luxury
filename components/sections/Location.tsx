@@ -20,7 +20,7 @@ export default function Location() {
             <Reveal>
               <div className="flex flex-col gap-3">
                 <span className="font-sans text-[11px] font-semibold tracking-[0.25em] text-(--color-gold) uppercase">
-                  Find G3 Luxury Massage & Spa
+                  Find G3 Luxury Massage & Wellness Spa
                 </span>
                 <h2 className="font-display text-4xl sm:text-5xl font-light text-white leading-tight">
                   Location &amp; Hours
@@ -55,10 +55,15 @@ export default function Location() {
                     <span className="font-sans text-[10px] font-semibold tracking-wider text-zinc-500 uppercase">
                       Address
                     </span>
-                    <span className="font-sans text-sm sm:text-base text-zinc-200 leading-relaxed max-w-sm">
+                    <a
+                      href="https://maps.google.com/?q=G3+Luxury+Massage+%26+Wellness+Spa,+Tin+Batti+Circle,+Nani+Daman"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="font-sans text-sm sm:text-base text-zinc-200 leading-relaxed max-w-sm selectable-contact hover:text-(--color-gold) transition-colors duration-300 block"
+                    >
                       G3 Luxury Massage &amp; Wellness Spa, 10/56, Tin Batti
                       Circle, Near MK Mobile, Nani Daman - 396 210
-                    </span>
+                    </a>
                   </div>
                 </div>
               </Reveal>
@@ -115,7 +120,7 @@ export default function Location() {
                     </span>
                     <a
                       href="tel:+918153001114"
-                      className="font-sans text-sm sm:text-base text-zinc-200 transition-colors duration-300 hover:text-(--color-gold)"
+                      className="font-sans text-sm sm:text-base text-zinc-200 transition-colors duration-300 hover:text-(--color-gold) selectable-contact"
                     >
                       +91 81530 01114
                     </a>

@@ -40,7 +40,7 @@ export default function About() {
           <div className="relative h-[26rem] w-full overflow-hidden sm:h-[34rem]">
             <Image
               src={getAssetPath("/about_us.png")}
-              alt="G3 Luxury sanctuary interior"
+              alt="G3 Luxury interior"
               fill
               sizes="100vw"
               className="object-cover opacity-80"

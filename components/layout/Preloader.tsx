@@ -31,7 +31,7 @@ export default function Preloader() {
         />
         <Image
           src={getAssetPath("/loader.png")}
-          alt="G3 Luxury"
+          alt="G3 Luxury Massage & Wellness Spa"
           width={40}
           height={40}
           priority

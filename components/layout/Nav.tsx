@@ -70,9 +70,9 @@ export default function Nav() {
         {/* Left: Brand Logo Container */}
         <div className="flex flex-1 basis-0 items-center justify-start">
           <motion.a
-            href="#hero"
+            href="/#hero"
             onClick={(e) => {
-              e.preventDefault();
+              // e.preventDefault();
               scrollToSection("hero");
             }}
             aria-label="G3 Luxury Home"

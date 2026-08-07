@@ -1,5 +1,9 @@
 import type { Metadata } from "next";
-import { Cormorant_Garamond, Plus_Jakarta_Sans, Playfair_Display } from "next/font/google";
+import {
+  Cormorant_Garamond,
+  Plus_Jakarta_Sans,
+  Playfair_Display,
+} from "next/font/google";
 import JsonLd from "@/components/ui/JsonLd";
 import CookieConsentBanner from "@/components/ui/CookieConsentBanner";
 import AnalyticsScripts from "@/components/ui/AnalyticsScripts";
