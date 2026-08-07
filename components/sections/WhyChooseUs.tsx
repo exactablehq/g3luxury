@@ -21,8 +21,7 @@ export default function WhyChooseUs() {
         <Reveal className="flex flex-col items-center text-center">
           <SectionHeading title="The Art of True Wellness">
             We merge ancestral healing wisdom with premium modern luxury,
-            ensuring every second spent in our sanctuary is profoundly
-            restoring.
+            ensuring every second spent with us is profoundly restoring.
           </SectionHeading>
         </Reveal>
       </div>

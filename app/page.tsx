@@ -7,8 +7,7 @@ import Hero from "@/components/sections/Hero";
 import About from "@/components/sections/About";
 import WhyChooseUs from "@/components/sections/WhyChooseUs";
 import Services from "@/components/sections/Services";
-import WellnessJourney from "@/components/sections/WellnessJourney";
-import Faq from "@/components/sections/Faq";
+import Location from "@/components/sections/Location";
 
 export default function Home() {
   return (
@@ -23,8 +22,7 @@ export default function Home() {
         <About />
         <WhyChooseUs />
         <Services />
-        <WellnessJourney />
-        <Faq />
+        <Location />
       </main>
 
       <Footer />
