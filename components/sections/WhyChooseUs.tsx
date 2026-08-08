@@ -29,8 +29,8 @@ export default function WhyChooseUs() {
       {/* Full-Width Infinite Marquee Track */}
       <div className="relative mt-20 w-full overflow-hidden">
         {/* Deep Soft Fade Gradients on Left and Right Borders */}
-        <div className="pointer-events-none absolute inset-y-0 left-0 z-20 w-32 bg-gradient-to-r from-(--color-bg-void) via-(--color-bg-void)/80 to-transparent sm:w-64" />
-        <div className="pointer-events-none absolute inset-y-0 right-0 z-20 w-32 bg-gradient-to-l from-(--color-bg-void) via-(--color-bg-void)/80 to-transparent sm:w-64" />
+        <div className="pointer-events-none absolute inset-y-0 left-0 z-20 w-12 bg-gradient-to-r from-(--color-bg-void) via-(--color-bg-void)/80 to-transparent sm:w-64" />
+        <div className="pointer-events-none absolute inset-y-0 right-0 z-20 w-12 bg-gradient-to-l from-(--color-bg-void) via-(--color-bg-void)/80 to-transparent sm:w-64" />
 
         {/* Animated Marquee Inner */}
         <div className="flex w-full overflow-hidden">
