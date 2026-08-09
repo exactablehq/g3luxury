@@ -11,7 +11,7 @@ export default function About() {
   return (
     <section
       id="about"
-      className="relative overflow-hidden bg-(--color-bg-void) py-28 md:py-36"
+      className="relative bg-(--color-bg-void) py-28 md:py-36"
     >
       {/* Static Ambient Gold Glow */}
       <div
