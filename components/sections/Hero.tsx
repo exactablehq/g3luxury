@@ -2,6 +2,7 @@
 
 import { motion, type Variants } from "framer-motion";
 import { WHATSAPP_LINK, getAssetPath } from "@/lib/constants";
+import { ChevronDown } from "lucide-react";
 
 const container: Variants = {
   hidden: {},
@@ -113,9 +114,11 @@ export default function Hero() {
         <motion.div
           animate={{ y: [0, 8, 0] }}
           transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-          className="flex h-9 w-6 items-start justify-center rounded-full border border-white/20 p-1.5"
+          className="flex items-start justify-center rounded-full p-1.5"
+          // className="flex h-9 w-6 items-start justify-center rounded-full border border-white/20 p-1.5"
         >
-          <div className="h-1.5 w-1 rounded-full bg-(--color-gold)" />
+          {/* <div className="h-1.5 w-1 rounded-full bg-(--color-gold)" /> */}
+          <ChevronDown className="w-6 h-6 text-(--color-gold)" />
         </motion.div>
       </motion.div>
     </header>
